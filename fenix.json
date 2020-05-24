@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/FenixTemplates/FenixTemplates/master/fenix-schema.json",
+  "author": "ACharLuk",
+  "repoName": "Easy C++ Projects",
+  "repoUrl": "https://raw.githubusercontent.com/FenixTemplates/EasyCppProjects/master/",
+  "version": 1.0,
+  "templates": [
+    {
+      "id": "cpp-gcc",
+      "displayName": "[G++/GDB] C++ Linux",
+      "description": "Create a C++ project structure for GCC with Makefile",
+      "language": "C++",
+      "category": [
+          "Programming"
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+      "directories": [
+          ".vscode",
+          "bin",
+          "include",
+          "lib",
+          "src"
+      ],
+      "files": {
+          "download": [
+              {
+                  "from": "cpp/main.cpp",
+                  "to": "src/main.cpp"
+              },
+              {
+                  "from": "cpp/makefile",
+                  "to": "makefile"
+              },
+              {
+                  "from": "cpp/tasks.json",
+                  "to": ".vscode/tasks.json"
+              },
+              {
+                  "from": "cpp/gdb-launch.json",
+                  "to": ".vscode/launch.json"
+              }
+          ],
+          "open": [
+              "src/main.cpp"
+          ]
+      },
+      "command": {
+          "Linux": "make run",
+          "windows": "bash -c 'make run'",
+          "macos": "make run"
+      }
+  }
+  ]
+}
