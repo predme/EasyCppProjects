@@ -6,7 +6,7 @@
   "version": 1.0,
   "templates": [
     {
-      "id": "cpp-gcc",
+      "id": "easycppprojects-gcc-linux",
       "displayName": "[G++/GDB] C++ Linux",
       "description": "Create a C++ project structure for GCC with Makefile",
       "language": "C++",
@@ -28,8 +28,8 @@
                   "to": "src/main.cpp"
               },
               {
-                  "from": "cpp/makefile",
-                  "to": "makefile"
+                  "from": "cpp/Makefile",
+                  "to": "Makefile"
               },
               {
                   "from": "cpp/tasks.json",
@@ -44,11 +44,290 @@
               "src/main.cpp"
           ]
       },
-      "command": {
-          "Linux": "make run",
-          "windows": "bash -c 'make run'",
-          "macos": "make run"
+      "command": "make run"
+    },
+    {
+        "id": "easycppprojects-clang-macos",
+        "displayName": "[Clang/LLDB] C++ macOS",
+        "description": "Create a C++ project structure for Clang with Makefile",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "clang/Makefile",
+                    "to": "Makefile"
+                },
+                {
+                    "from": "cpp/tasks.json",
+                    "to": ".vscode/tasks.json"
+                },
+                {
+                    "from": "clang/launch.json",
+                    "to": ".vscode/launch.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        },
+        "command": "make run"
+      },
+      {
+        "id": "easycppprojects-wsl",
+        "displayName": "[WSL] C++ Windows Subsystem for Linux",
+        "description": "Create a C++ project structure for WSL with Makefile",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "cpp/Makefile",
+                    "to": "Makefile"
+                },
+                {
+                    "from": "wsl/tasks.json",
+                    "to": ".vscode/tasks.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        },
+        "command": "make run"
+      },
+      {
+        "id": "easycppprojects-msvc-2017-x64",
+        "displayName": "[MSVC] Windows x64, Visual Studio Build Tools 2017",
+        "description": "Create a C++ project structure for MSVC 2017 x64",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "msvc/build_x64_2017.bat",
+                    "to": "build.bat"
+                },
+                {
+                    "from": "msvc/tasks.json",
+                    "to": ".vscode/tasks.json"
+                },
+                {
+                    "from": "msvc/launch.json",
+                    "to": ".vscode/launch.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        },
+        "command": ".\\build.bat"
+      },
+      {
+        "id": "easycppprojects-msvc-2017-x86",
+        "displayName": "[MSVC] Windows x86, Visual Studio Build Tools 2017",
+        "description": "Create a C++ project structure for MSVC 2017 x86",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "msvc/build_x86_2017.bat",
+                    "to": "build.bat"
+                },
+                {
+                    "from": "msvc/tasks.json",
+                    "to": ".vscode/tasks.json"
+                },
+                {
+                    "from": "msvc/launch.json",
+                    "to": ".vscode/launch.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        },
+        "command": ".\\build.bat"
+      },
+      {
+        "id": "easycppprojects-msvc-2019-x64",
+        "displayName": "[MSVC] Windows x64, Visual Studio Build Tools 2019",
+        "description": "Create a C++ project structure for MSVC 2019 x64",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "msvc/build_x64_2019.bat",
+                    "to": "build.bat"
+                },
+                {
+                    "from": "msvc/tasks.json",
+                    "to": ".vscode/tasks.json"
+                },
+                {
+                    "from": "msvc/launch.json",
+                    "to": ".vscode/launch.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        },
+        "command": ".\\build.bat"
+      },
+      {
+        "id": "easycppprojects-msvc-2019-x86",
+        "displayName": "[MSVC] Windows x86, Visual Studio Build Tools 2019",
+        "description": "Create a C++ project structure for MSVC 2019 x86",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "msvc/build_x86_2019.bat",
+                    "to": "build.bat"
+                },
+                {
+                    "from": "msvc/tasks.json",
+                    "to": ".vscode/tasks.json"
+                },
+                {
+                    "from": "msvc/launch.json",
+                    "to": ".vscode/launch.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        },
+        "command": ".\\build.bat"
+      },
+      {
+        "id": "easycppprojects-cmake",
+        "displayName": "[CMake] Cross-platform (Created by KochankovID)",
+        "description": "Create a C++ project structure for CMake",
+        "language": "C++",
+        "category": [
+            "Programming"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "directories": [
+            ".vscode",
+            "bin",
+            "include",
+            "lib",
+            "src",
+            "build"
+        ],
+        "files": {
+            "download": [
+                {
+                    "from": "cpp/main.cpp",
+                    "to": "src/main.cpp"
+                },
+                {
+                    "from": "CMake/CMakeLists.txt",
+                    "to": "CMakeLists.txt"
+                },
+                {
+                    "from": "CMake/tasks.json",
+                    "to": ".vscode/tasks.json"
+                },
+                {
+                    "from": "CMake/launch.json",
+                    "to": ".vscode/launch.json"
+                }
+            ],
+            "open": [
+                "src/main.cpp"
+            ]
+        }
       }
-  }
   ]
 }
