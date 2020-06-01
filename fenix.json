@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/FenixTemplates/FenixTemplates/master/fenix-schema.json",
-    "author": "ACharLuk",
+    "author": "ACharLuk (modified by predme)",
     "repoName": "Easy C++ Projects",
     "repoUrl": "https://raw.githubusercontent.com/predme/EasyCppProjects/master/",
     "version": 1.0,
